@@ -11,10 +11,10 @@ class myAdapter(fragmentManager: FragmentManager, lifecycle: Lifecycle): Fragmen
     }
 
     override fun createFragment(position: Int): Fragment {
-        when(position) {
-            0 -> return Fiat()
-            1 -> return Crypto()
-            else -> return Fiat()
+        return when(position) {
+            0 -> Fiat()
+            1 -> Crypto()
+            else -> Fiat()
         }
     }
 }
