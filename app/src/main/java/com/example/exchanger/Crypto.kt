@@ -27,7 +27,7 @@ class Crypto : Fragment(R.layout.fragment_crypto) {
         cryptolist.add(crypro_data(R.drawable.a7872fcc56858227ffa183256a5d55e1,"ADA","ADA"))
         cryptolist.add(crypro_data(R.drawable.bitcoin,"DOGE","DOGE"))
         cryptolist.add(crypro_data(R.drawable.download,"SHIB","SHIB"))
-        cryptolist.add(crypro_data(R.drawable.d1da3e364444683013c6a7ac67d67063,"XRP","XRP"))
+        cryptolist.add(crypro_data(R.drawable.ethereum,"XRP","XRP"))
 
 
         cryptoAdapter =  cryptoAdapter(cryptolist)

@@ -48,11 +48,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:fontFamily="@font/custom"
             android:hint="Password"
-            android:inputType="textPersonName"
+            android:inputType="textPassword"
             android:text=""
-            android:textSize="20dp"
-            android:fontFamily="@font/custom"/>
+            android:textSize="20dp" />
 
         <Button
             android:id="@+id/sign_in"

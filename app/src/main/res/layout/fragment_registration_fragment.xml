@@ -38,7 +38,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:hint="სახელი"
+            android:hint="Name"
             android:text="" />
 
         <EditText
@@ -46,7 +46,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:hint="გვარი"
+            android:hint="Surname"
             android:text="" />
 
     </LinearLayout>
@@ -71,14 +71,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="პირადი ნომერი"
+            android:hint="Privace Number"
             android:text="" />
         <EditText
             android:id="@+id/city"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="ქალაქი"
+            android:hint="City"
             android:text="" />
         <EditText
             android:id="@+id/email"
@@ -95,21 +95,31 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="პაროლი"
-            android:inputType="textPersonName"
+            android:hint="password"
+            android:inputType="textPassword"
+            android:text=""/>
+
+        <EditText
+            android:id="@+id/password2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Repeat password"
+            android:inputType="textPassword"
             android:text="" />
+
 
         <CheckBox
             android:id="@+id/checkBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="გავეცანი და ვეთანხმები" />
+            android:text="Privace Police" />
 
         <Button
             android:id="@+id/registration"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="#94B49F"
-            android:text="რეგისტრაცია" />
+            android:text="Registration" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

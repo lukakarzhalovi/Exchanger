@@ -22,13 +22,22 @@ class sign_in : Fragment(R.layout.fragment_sign_in) {
         auth = FirebaseAuth.getInstance()
 
         sign_inButton.setOnClickListener {
-            auth.signInWithEmailAndPassword(email.text.toString(),password.text.toString()).addOnCompleteListener{
-                if (it.isSuccessful) {
-                    findNavController().navigate(R.id.action_sign_in_to_main_fragment)
-                } else {
-                    Toast.makeText(activity, "შეყვანილი მონაცემები არასწორია", Toast.LENGTH_SHORT)
-                        .show()
-                }
+            if(email.text.isNotEmpty() and password.text.isNotEmpty()) {
+                auth.signInWithEmailAndPassword(email.text.toString(), password.text.toString())
+                    .addOnCompleteListener {
+                        if (it.isSuccessful) {
+                            findNavController().navigate(R.id.action_sign_in_to_main_fragment)
+                        } else {
+                            Toast.makeText(
+                                activity,
+                                "შეყვანილი მონაცემები არასწორია",
+                                Toast.LENGTH_SHORT
+                            )
+                                .show()
+                        }
+                    }
+            }else{
+                Toast.makeText(activity, "შეავსეთ მოვემული ველები", Toast.LENGTH_LONG).show()
             }
         }
         registrationButton.setOnClickListener {

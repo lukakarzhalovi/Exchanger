@@ -9,7 +9,14 @@
         android:id="@+id/history2"
         android:name="com.example.exchanger.History"
         android:label="fragment_history"
-        tools:layout="@layout/fragment_history" />
+        tools:layout="@layout/fragment_history" >
+        <action
+            android:id="@+id/action_history2_to_home2"
+            app:destination="@id/home2" />
+        <action
+            android:id="@+id/action_history2_to_report2"
+            app:destination="@id/report2" />
+    </fragment>
     <fragment
         android:id="@+id/home2"
         android:name="com.example.exchanger.Home"
@@ -27,5 +34,9 @@
     <fragment
         android:id="@+id/pay_fragment2"
         android:name="com.example.exchanger.pay_fragment"
-        android:label="pay_fragment" />
+        android:label="pay_fragment" >
+        <action
+            android:id="@+id/action_pay_fragment2_to_history2"
+            app:destination="@id/history2" />
+    </fragment>
 </navigation>
