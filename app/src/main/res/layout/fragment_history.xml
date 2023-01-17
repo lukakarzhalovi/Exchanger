@@ -8,18 +8,6 @@
     android:orientation="vertical"
     android:background="@color/black">
 
-
-    <Button
-        android:id="@+id/restart"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:textStyle="bold"
-        android:textSize="20sp"
-        android:text="Restart"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
     <LinearLayout
         android:id="@+id/linearLayout5"
         android:layout_width="match_parent"
@@ -29,7 +17,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:weightSum="2">
+        android:weightSum="2"
+        android:layout_marginBottom="50dp">
 
         <TextView
             android:id="@+id/Card_Number"
@@ -56,6 +45,34 @@
             android:textSize="20sp"
             android:textStyle="bold"
             android:background="@color/purple_700"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/restart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Restart"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+        <Button
+            android:id="@+id/Home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:text="Home"/>
+
 
     </LinearLayout>
 

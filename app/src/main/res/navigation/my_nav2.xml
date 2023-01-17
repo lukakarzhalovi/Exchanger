@@ -16,6 +16,12 @@
         <action
             android:id="@+id/action_history2_to_report2"
             app:destination="@id/report2" />
+        <action
+            android:id="@+id/action_history2_to_pay_fragment2"
+            app:destination="@id/pay_fragment2" />
+        <action
+            android:id="@+id/action_history2_to_home22"
+            app:destination="@id/home2" />
     </fragment>
     <fragment
         android:id="@+id/home2"
