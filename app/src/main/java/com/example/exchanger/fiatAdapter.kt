@@ -9,6 +9,9 @@ import androidx.recyclerview.widget.RecyclerView
 
 class fiatAdapter(private val fiatlist: ArrayList<fiat_data>)
     : RecyclerView.Adapter<fiatAdapter.FiatViewHolder>(){
+
+    var onItemClick : ((fiat_data) -> Unit)? = null
+
     class FiatViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         val imageView: ImageView = itemView.findViewById(R.id.imageView)
         val textView: TextView = itemView.findViewById(R.id.fiat_text)
@@ -23,6 +26,10 @@ class fiatAdapter(private val fiatlist: ArrayList<fiat_data>)
         val fiat = fiatlist[position]
         holder.imageView.setImageResource(fiat.image)
         holder.textView.text = fiat.name
+        holder.itemView.setOnClickListener{
+            onItemClick?.invoke(fiat)
+
+        }
     }
 
     override fun getItemCount(): Int {

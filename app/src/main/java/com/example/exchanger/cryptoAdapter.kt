@@ -10,6 +10,8 @@ import androidx.recyclerview.widget.RecyclerView
 class cryptoAdapter (private val cryptolist: ArrayList<crypro_data>)
     : RecyclerView.Adapter<cryptoAdapter.CryptoViewHolder>(){
 
+    var onItemClick : ((crypro_data) -> Unit)? = null
+
 
     class CryptoViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         val imageView: ImageView = itemView.findViewById(R.id.imageView)
@@ -25,6 +27,10 @@ class cryptoAdapter (private val cryptolist: ArrayList<crypro_data>)
         val crypto = cryptolist[position]
         holder.imageView.setImageResource(crypto.image)
         holder.textView.text = crypto.name
+        holder.itemView.setOnClickListener{
+            onItemClick?.invoke(crypto)
+
+        }
     }
 
     override fun getItemCount(): Int {
